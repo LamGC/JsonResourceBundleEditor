@@ -1,0 +1,53 @@
+.editor {
+    float: left;
+    width: 49%;
+    height: 100%;
+    border: 1% solid black;
+    overflow-x: auto;
+}
+
+.code {
+    float: right;
+    width: 49%;
+    height: 100%;
+    border: 1% solid black;
+}
+
+.code-area {
+    width: 100%;
+    height: 100%;
+    resize : none;
+    overflow-x: auto;
+}
+
+.map-edit {
+    width: 100%
+}
+
+.map-edit tr {
+    height: 22px;
+}
+
+.table-title {
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#temp-row {
+    display: none;
+}
+
+.input {
+    width: 100%;
+}
+
+.type-col {
+    width: 13.33%;
+}
+
+.input-col {
+    width: 39.36%;
+}

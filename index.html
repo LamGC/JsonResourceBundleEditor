@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Json ResourceBundle Editor</title>
+        <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+    <body>
+        <div class="editor">
+            <table class="text-center map-edit" border="1px" cellpadding="1px" cellspacing="1px">
+                <tr>
+                    <th class="table-title" colspan="4">Map Edit</th>
+                </tr>
+                <tr id="header-row">
+                    <td class="text-center" colspan="4">
+                        <button onclick="map_addRow()">Add row</button>
+                        <button onclick="map_delSelectRow()">Delete select row</button>
+                        <button onclick="map_clearTable()">Clear table</button>
+                        <button onclick="map_loadFromCode()">Load from code</button>
+                        <button onclick="map_build()">Build</button>
+                        <br/>
+                        Indent: <input type="text" value="    " id="input-indent" onchange="$()" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="text-center select-col">Select</th>
+                    <th class="text-center input-col">Key</th>
+                    <th class="text-center input-col">Value</th>
+                    <th class="text-center type-col">Type</th>
+                </tr>
+                <tr id="temp-row">
+                    <td class="select-col">
+                        <input type="checkbox" class="input-row-select" />
+                    </td>
+                    <td class="input-col">
+                        <input type="text" class="input input-key" placeholder="key" />
+                    </td>
+                    <td class="input-col">
+                        <input type="text" class="input input-value" placeholder="value" />
+                    </td>
+                    <td class="type-col">
+                        <select onchange="type_select(this)">
+                            <option selected>String</option>
+                            <option>Number</option>
+                            <option>Boolean</option>
+                            <option>Null</option>
+                            <option>Object/Array</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="code">
+            <textarea class="code-area"></textarea>
+        </div>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
